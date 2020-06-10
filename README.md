@@ -1,6 +1,10 @@
 # huaban_spider
 spider of huaban
 
+起因是群里有个小伙伴喜欢 李宣美 
+跟我说他写了个爬虫   但是爬花瓣网失败了
+于是我用selenium + xpath 试了下
+
 花瓣网爬虫
 selenuim + xpath 实现
 
