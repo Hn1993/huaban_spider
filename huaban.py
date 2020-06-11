@@ -1,3 +1,6 @@
+from random import random
+from telnetlib import EC
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.wait import WebDriverWait
@@ -5,7 +8,32 @@ from time import sleep
 import requests
 
 
+
 driver = webdriver.Chrome()
+
+#  在这里加一个获取代理ip的方法
+# driver.get('https://www.xicidaili.com/nn')  # 西刺代理
+#
+# # 如果  xpath为 下一页  的元素可见，执行下一步  否则，等待最长的10S的等待时间
+# WebDriverWait(driver,10).until(EC.visibility_of(driver.find_element_by_xpath('//*[@id="body"]/div[3]/a[11]')))
+# random_num = random.randint(2,98)
+# print('random_num=',random_num)
+# random_proxy_ip_info = driver.find_element_by_xpath('//*[@id="ip_list"]/tbody/tr['+str(random_num)+']')
+# random_proxy_ip_info_list = str(random_proxy_ip_info.text).replace('\n', ' ').replace('\r', ' ').split(' ')
+# print('ip=',random_proxy_ip_info_list[0])
+# print('port=',random_proxy_ip_info_list[1])
+# print('type=',random_proxy_ip_info_list[4])
+# driver.close()
+#
+# proxy_ip = str(random_proxy_ip_info_list[4])+"://"+str(random_proxy_ip_info_list[0])+":"+str(random_proxy_ip_info_list[1])
+# chromeOptions = webdriver.ChromeOptions()
+# # 设置代理
+# chromeOptions.add_argument('--proxy-server='+str)
+# # 一定要注意，=两边不能有空格，不能是这样--proxy-server = http://202.20.16.82:10152
+# driver = webdriver.Chrome(options = chromeOptions)
+
+
+
 driver.get('https://www.huaban.com/')
 wait = WebDriverWait(driver,3) # 等待3S
 
